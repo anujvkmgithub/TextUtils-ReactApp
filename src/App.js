@@ -1,4 +1,3 @@
-import react from "react";
 import "./App.css";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
@@ -30,7 +29,7 @@ function App(){
     const toggleMode = () => {
               if(mode === 'light'){
                     setMode('dark');
-                    document.body.style.backgroundColor = '#2a344f';
+                    document.body.style.backgroundColor = 'rgb(17 31 67)';
                     showAlert("Dark mode has been enabled", "success");
               }else{
                     setMode('light');
@@ -40,16 +39,15 @@ function App(){
     }
     return(
     <>
-          
           <Router>
           <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} aboutText="About"/>
           <Alert alert={alert}/>
           <div className="container my-1">
                 <Switch>
                     <Route exact path="/about">
-                      <About/>
+                      <About mode = {mode}/>
                     </Route>
-                <Route exact path="/">*/}
+                    <Route exact path="/">
                       <TextForm showAlert={showAlert} heading="Enter The Text To Analyze below" mode = {mode}/>
                     </Route>
                 </Switch>
