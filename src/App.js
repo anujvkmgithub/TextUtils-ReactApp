@@ -13,7 +13,7 @@ import Alert from "./components/Alert";
 
 function App(){
 
-    const [mode, setMode] = useState('light'); //weather dark mode enable or not
+    const [mode, setMode] = useState('light');
 
     const [alert, setAlert] = useState(null);
 
