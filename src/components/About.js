@@ -5,7 +5,6 @@ export default function About(props) {
     let myStyle ={
         color: props.mode === "dark"?"white":"rgb(33 49 96)",
         backgroundColor: props.mode === "dark"?"rgb(33 49 96)":"white",
-       // border: "1px solid",
         borderColor: props.mode === "dark"?"white":"rgb(33 49 96)"
 
     }
