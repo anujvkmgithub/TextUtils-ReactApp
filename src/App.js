@@ -39,7 +39,7 @@ function App(){
     }
     return(
     <>
-          <Router>
+          <Router basename="/TextUtils-ReactApp">
           <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} aboutText="About"/>
           <Alert alert={alert}/>
           <div className="container my-1">
@@ -47,7 +47,7 @@ function App(){
                     <Route exact path="/about">
                       <About mode = {mode}/>
                     </Route>
-                    <Route exact path="">
+                    <Route exact path="/">
                       <TextForm showAlert={showAlert} heading="Enter The Text To Analyze below" mode = {mode}/>
                     </Route>
                 </Switch>
